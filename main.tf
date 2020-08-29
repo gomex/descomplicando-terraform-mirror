@@ -4,9 +4,10 @@ provider "aws" {
 }
 
 module "ec2" {
-  source                  = "git@github.com:gomex/descomplicando-terraform-modulo-mirror.git"
+  source                  = "git@github.com:gomex/descomplicando-terraform-modulo-mirror.git?ref=v0.1"
   app_name                = "ao-vivo-turma3"
   instance_type           = "t3.micro"
+  count                   = 2
 }
 
 output "ip_address_ec2" {
