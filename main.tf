@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 module "ec2" {
-  source                  = "git@github.com:gomex/descomplicando-terraform-modulo-mirror.git?ref=v0.1"
+  source                  = "git@github.com:gomex/descomplicando-terraform-modulo-mirror.git?ref=v0.2"
   app_name                = "ao-vivo-turma3"
   instance_type           = "t3.micro"
   count                   = 2
